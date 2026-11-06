@@ -1,0 +1,1 @@
+{"name":"math-domino-live","private":true,"type":"module","scripts":{"dev":"vite --host","build":"vite build","preview":"vite preview"},"dependencies":{"firebase":"^10.14.1","qrcode":"^1.5.4"},"devDependencies":{"vite":"^5.4.10"}}

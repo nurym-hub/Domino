@@ -1,0 +1,6 @@
+{"rules":{"rooms":{"$code":{
+".read":"auth != null",
+".write":"auth != null && (!data.exists() || data.child('host').val() === auth.uid)",
+"players":{"$pid":{".write":"auth != null && auth.uid === $pid && !data.exists()",".validate":"newData.child('name').isString() && newData.child('name').val().length <= 24"}},
+"answers":{"$round":{"$pid":{".write":"auth != null && auth.uid === $pid && !data.exists() && root.child('rooms').child($code).child('status').val() === 'question' && (root.child('rooms').child($code).child('round').val() + '') === $round"}}}
+}}}}
